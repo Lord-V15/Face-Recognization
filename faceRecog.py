@@ -1,14 +1,15 @@
-#recognise faces using some classification algorithm -KNN ,Logistic regression
-
-#1. Read a video stream using open cv
-#2. Extract faces out of it
-#3. Load training data (numpy arrays of all persons)
+#recognise faces using the classification algorithm K-Nearest Neighbours 
+'''
+This is how we intend to implement our solution
+1. Read a video stream using open cv
+2. Extract faces out of it
+3. Load training data (numpy arrays of all persons)
     #x -values are stored in numpy arrays
     #y- values we need to assign for each person
-#4. useing K-NN to find prediction of the user
-#5. map the predicted id to the name of the user
-#6. Display the predictions ont the screen
-
+4. useing K-NN to find prediction of the user
+5. map the predicted id to the name of the user
+6. Display the predictions ont the screen//
+'''
 
 import numpy as np
 import cv2
@@ -16,7 +17,7 @@ import os
 
 ########## KNN CODE ############
 def distance(v1, v2):
-	# Eucledian 
+	# Eucledian Distance
 	return np.sqrt(((v1-v2)**2).sum())
 
 def knn(train, test, k=5):
